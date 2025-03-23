@@ -1,0 +1,16 @@
+{
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres-user",
+    "database.password": "postgres-pw",
+    "database.dbname": "customers",
+    "topic.prefix": "db_customers.public-",
+    "schema.include.list": "public",
+    "table.include.list": "public.users, public.orders",
+    "snapshot.mode": "when_needed",
+    "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "value.converter.schemas.enable": "false"
+
+}
